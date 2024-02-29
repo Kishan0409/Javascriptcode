@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SET TIMEOUT AND SETINTERVAL</title>
+</head>
+<body>
+    <h1>Javascript settimeout and setinterval</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+  const timeout = function() {
+    console.log("Hii")
+  }
+
+const changeText = function() {
+    document.querySelector('h1').innerHTML =  'best javascript series'
+}
+  
+  
+   const chnangeMe = setTimeout(changeText , 5000);
+
+   document.getElementById('stop').addEventListener('click' , function() {
+    clearTimeout(chnangeMe);
+    console.log("stop clicked!")
+   }) 
+   
+    
+  
+
+</script>
+</html>
